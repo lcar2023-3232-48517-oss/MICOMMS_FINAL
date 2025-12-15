@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICOMMS</title>
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/png" href="images/logoalt.png">
+    <link rel="stylesheet" href="admin-user.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+     <header>
+         <nav class="navbar section-content">
+             <div class="logo-container">
+                <a href="landing-basket.htm" class="back-button" title="Back to landing page">
+                     <i class="material-icons">arrow_back</i>
+                     </a>
+                     <img src="images/logo-white.png" alt="MiCOMMS logo" class="logo-img">
+                     <a href="#" class="nav-logo">
+                        <h2 class="logo-text">MiCOMMS</h2>
+                    </a>
+                </div>
+            </nav>
+
+  <nav class="navigation">
+    <div class="profile-section">
+        <i class="material-icons profile-icon" aria-label="Profile">account_circle</i>
+    </div>
+  </nav>
+</header>
+
+    <main>
+        <section class="content-container">
+            <aside class="sidebar">
+                <h3>Seller / Admin</h3>
+                <p class="bio">Details about the products they sell...</p><hr>
+
+                    <div class="tabs">
+                        <button data-tab="report" onclick="openReportModal()">Report</button>
+                        <button data-tab="block" class="block-btn" onclick="openBlockModal()">Block</button>
+                    </div>
+            </aside>
+            <!-- View As -->
+                <div class="tabs-content active" id="view" data-content="view">
+                    <h4>PRODUCTS</h4>
+                        <section class="product-list">
+                            
+                            <div class="product-card">
+                                <div class="product-img"></div>
+                                <div class="product-info">
+                                <h5>Product Name</h5>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit consequat.
+                                </p>
+                                <div class="buy-buttons">
+                                    <button class="buy-now" onclick="buyNow()">Buy Now</button>
+                                    <button class="add-cart" onclick="addToCart()">Add to Cart</button>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-img"></div>
+                                <div class="product-info">
+                                <h5>Product Name</h5>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit consequat.
+                                </p>
+                                <div class="buy-buttons">
+                                <button class="buy-now" onclick="buyNow()">Buy Now</button>
+                                <button class="add-cart" onclick="addToCart()">Add to Cart</button>
+                                </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-img"></div>
+                                <div class="product-info">
+                                <h5>Product Name</h5>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit consequat.
+                                </p>
+                                <div class="buy-buttons">
+                                <button class="buy-now" onclick="buyNow()">Buy Now</button>
+                                <button class="add-cart" onclick="addToCart()">Add to Cart</button>
+                                </div>
+                                </div>
+                            </div>
+
+                            
+                        </section>
+                    </div>
+
+        </section>
+
+    </main>
+
+<div id="modalOverlay" class="modal-overlay">
+
+  <!-- REPORT -->
+  <div class="modal" id="reportModal">
+    <h4>Report Seller</h4>
+    <p>Please describe the issue with this seller</p>
+
+    <textarea rows="4"></textarea>
+
+    <div class="block-buttons">
+      <button class="block-confirm" onclick="submitReport()">Submit</button>
+      <button class="block-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- BLOCK -->
+  <div class="modal" id="blockModal">
+    <h4>Block Seller</h4>
+    <p>Are you sure you want to block this seller?</p>
+
+    <div class="block-buttons">
+      <button class="block-confirm" onclick="confirmBlock()">Block</button>
+      <button class="block-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+    <script src="admin-user.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,1323 @@
+<!--LANDING/HOME PAGE-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="'width=devide-width, initial-scale=1.0">
+
+        <!--=== PRIMARY META TAG ===-->
+        <title>MiCOMMS</title>
+        <meta name="title" content="MiCOMMS - Good Artists, Great Art">
+        <meta name="description" content="A Website where artists and art enthusiasts unite (??)">
+
+        <!--=== FAVICON ===-->
+        <link rel="icon" type="image/png" href="images/logo-circle.png">
+
+        <!--=== CUSTOM CSS LINK ===-->
+        <link rel="stylesheet" href="landing-basket.css">
+
+        <!--=== GOOGLE FONT LINK ===-->
+        <!--Righteous Font - for the Logo Name-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <!--Lexend - for non title text-->
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
+
+        <!--=== MATERIAL ICONS LINK ===-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!--=== PRELOAD IMAGES ===-->
+        <link rel="preload" as="image" href="images/sunflemon-art.jpg">
+        <link rel="preload" as="image" href="images/boniifran-Art.png">
+        <link rel="preload" as="image" href="images/3ksdee-art.jpg">
+        <link rel="preload" as="image" href="images/kira-art.png">
+        <link rel="preload" as="image" href="images/ikinatkat-art.jpg">
+    </head>
+
+    <body id="top">
+        <!--=== HEADER ===-->
+        <header class="header" data-header>
+            <div class="container">
+
+                <!-- NAME AND LOGO -->
+                <a class="nav-logo"> 
+                    <img src="images/logo-white.png" alt="MiCOMMS logo" class="logo-img">
+                    <h2 class="logo-text">MiCOMMS</h2>
+                </a>
+
+                <!-- SEARCH BAR Input -->
+                <div class="input-wrapper"> 
+                    <input type="search" placeholder="Search" class="input-field"> 
+                    <button class="search-button"><ion-icon name="search-outline" aria-hidden="true"></ion-icon></button>
+                </div>
+
+                <div class="header-action">
+
+                    <!--BASKET ICON-->
+                    <button class="header-action-btn" aria-label="basket" data-basket-toggler>
+                        <div class="basket-icon" id="basket-icon">
+                            <ion-icon name="basket" aria-hidden="true"></ion-icon>
+                            <span class="btn-badge">0</span>
+                        </div>
+                    </button>
+
+                    <!-- MENU -->
+                    <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                        <ion-icon name="menu" aria-hidden="true"></ion-icon>
+                    </button> 
+
+                  <!-- USER ICON -->
+                   <button class="header-action-btn" aria-label="user" id="user-icon-btn">
+                    <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
+                </button>
+            </div>
+        </header>
+
+
+        <!--=== SIDEBAR MENU ICON ===-->
+        <div class="sidebar" data-navbar>
+
+            <!-- Close Button -->
+            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                <ion-icon name="close" aria-hidden="true"></ion-icon>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#products" class="navbar-link" data-nav-link>Products</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#portfolio" class="navbar-link" data-nav-link>Portfolios</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#contact" class="navbar-link" data-nav-link>Newsletter</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Options -->
+            <div class="wrapper">
+                <ul class="sidebar-list">
+                    <li>
+                        <p class="sidebar-list">Log Out</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contacts -->
+             <ul class="contact-list">
+                <li>
+                    <p class="contact-list-title">Contact Us</p>
+                </li>
+
+                <li class="contact-item">
+                    <address class="address">
+                        Bicol University Polangui, Centro Occidental, Buhi Rd, Polangui, 4506 Albay
+                    </address>
+                </li>
+
+                <li class="contact-item">
+                    <a href="mailto:support.center@micomms.co" class="contact-link">support.center@micomms.co</a>
+                </li>
+
+                <li class="contact-item">
+                    <a href="tel:631234567891" class="contact-link">(+63)123-456-7891</a>
+                </li>
+             </ul>
+
+             <!-- Social Media Lists -->
+             <div class="social-wrapper">
+                <p class="social-list-title">Follow The Creators</p>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-tumblr"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+             </div>
+        </div>
+
+        <!--=== BASKET ICON ===-->
+        <div class="basket" data-basket>
+            <h2 class="basket-title">Your Basket</h2>
+            <div class="basket-content">
+
+                <!-- Basket Details
+                <div class="basket-box">
+                    <img src="images/button-pin (1).png" class="basket-img" alt="">
+                    <div class="basket-detail">
+                        <h2 class="basket-product-title">Button Pins</h2>
+                        <span class="basket-price">Php30.00</span>
+                        <div class="basket-quantity">
+                            <button id="decrement">-</button>
+                            <span class="number">1</span>
+                            <button id="increment">+</button>
+                        </div>
+                    </div>
+                    <ion-icon class="delete-product basket-remove" name="trash"></ion-icon>
+                </div> -->
+
+            </div>
+
+            <!-- Basket Total and Checkout Button-->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">Php0.00</div>
+            </div>
+            <button class="btn-buy" data-basket-toggler>Checkout</button>
+            <ion-icon name="close" id="basket-close"></ion-icon>
+        </div>
+
+        <div class="overlay-basket" data-overlay-basket data-basket-toggler></div>
+        <div class="overlay" data-overlay data-navbar-toggler></div>
+
+        <!--==== CHECKOUT SUMMARY - shows up after clicking check out ===-->
+        <div class="checkout-modal" id="checkout-modal">
+            <div class="checkout-content">
+                <h2>Order Summary</h2>
+                <div class="checkout-items"></div>
+            
+                <div class="checkout-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span class="checkout-subtotal">Php 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping Fee:</span>
+                        <span class="checkout-shipping">Php 50.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span class="checkout-total"> Php 0.00</span>
+                    </div>
+                </div>
+            
+                <button id="confirm-order" class="btn-buy">Confirm Order</button>
+                <button id="close-checkout" class="btn-close">Cancel</button>
+            </div>
+        </div>
+
+        <div class="checkout-overlay" id="checkout-overlay"></div>
+
+        <!--==== PRODUCT VIEW OVERLAY/MODAL ===-->
+        <div id="product-view-overlay" class="overlay"></div>
+        <div id="product-view-modal" class="checkout-modal">
+            <button id="product-view-close" class="btn-close">×</button>
+            <div class="product-view-content">
+                <img id="product-view-img" src="" alt="">
+                <h2 id="product-view-title" class="h3"></h2>
+                <p id="product-view-category" class="h4" style="color: grey;"></p>
+                <p id="product-view-price" class="h4" style="color: var(--green-color); font-weight: var(--font-weight-bold);"></p>
+                <button id="product-view-add-basket" class="btn-buy">Add to Basket</button>
+            </div>
+        </div>
+
+        <!--=== MAIN CTONENT OF THE LANDING PAGE ===-->
+        <main>
+            <article>
+
+                <!--HERO SECTION-->
+                <section class="section hero" id="home" aria-label="home">
+                    <div class="container">
+                        <h2 class="h2 section-title">Discover Art Merchandise</h2>
+                    
+                      <ul class="hero-list">
+                    
+                        <!-- Pins -->
+                        <li>
+                          <div class="hero-card">
+                        
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                              <img src="images/button-pin (1).png" width="285" height="396" alt="Button Pins" class="img-cover">
+                            </figure>
+                        
+                            <div class="card-content">
+                              <h3>
+                                <a href="#" class="card-title">Button Pins</a>
+                              </h3>
+                          
+                              <p class="card-text">Art</p>
+                            </div>
+                        
+                          </div>
+                        </li>
+
+                        <!-- Prints -->
+                        <li class="colspan-2">
+                          <div class="hero-card">
+                        
+                            <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
+                              <img src="images/print (3).png" width="568" height="389" alt="Prints" class="img-cover">
+                            </figure>
+                        
+                            <div class="card-content">
+                              <h3>
+                                <a href="#" class="card-title">Prints</a>
+                              </h3>
+                          
+                              <p class="card-text">Art</p>
+                            </div>
+                        
+                          </div>
+                        </li>
+                    
+                        <!-- Stickers -->
+                        <li>
+                          <div class="hero-card">
+                        
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                              <img src="images/stickers (4).png" width="285" height="396" alt="Stickers" class="img-cover">
+                            </figure>
+                        
+                            <div class="card-content">
+                              <h3>
+                                <a href="#" class="card-title">Stickers</a>
+                              </h3>
+                          
+                              <p class="card-text">Art</p>
+                            </div>
+                        
+                          </div>
+                        </li>
+                    
+                        <!-- Posters -->
+                        <li class="colspan-2">
+                          <div class="hero-card">
+                        
+                            <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                                <img src="images/poster (1).png" width="580" height="213" alt="Poster" class="img-cover">
+                            </figure>
+                        
+                            <div class="card-content">
+                              <h3>
+                                <a href="#" class="card-title">Posters</a>
+                              </h3>
+                          
+                              <p class="card-text">Art</p>
+                            </div>
+                        
+                          </div>
+                        </li>
+                    
+                        <!-- Keychains -->
+                        <li class="colspan-2">
+                          <div class="hero-card">
+                        
+                            <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                              <img src="images/keychain (3).png" width="580" height="213" alt="Keychains" class="img-cover">
+                            </figure>
+                        
+                            <div class="card-content">
+                              <h3>
+                                <a href="#" class="card-title">Keychains</a>
+                              </h3>
+                          
+                              <p class="card-text">Art</p>
+                            </div>
+                        
+                          </div>
+                        </li>
+                    
+                      </ul>
+                  
+                    </div>
+                </section>
+
+                <!--PRODUCTS-->
+                <section class="section product" id="product" aria-label="product">
+                    <div class="container">
+
+                        <!-- FILTERS -->
+                        <div class="title-wrapper">
+                            <h2 class="h2 section-title">Browse Products</h2>
+
+                            <ul class="filter-btn-list">
+                                <li class="filter-btn-item">
+                                    <button class="filter-btn active" data-filter-btn="all">All Products</button>
+                                </li>
+
+                                <li class="filter-btn-item">
+                                    <button class="filter-btn" data-filter-btn="buttonpin">Button Pins</button>
+                                </li>
+
+                                <li class="filter-btn-item">
+                                    <button class="filter-btn" data-filter-btn="keychain">Keychains</button>
+                                </li>
+
+                                <li class="filter-btn-item">
+                                    <button class="filter-btn" data-filter-btn="posterprint">Posters & Prints</button>
+                                </li>
+
+                                <li class="filter-btn-item">
+                                    <button class="filter-btn" data-filter-btn="sticker">Stickers</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- PRODUCT LISTINGS -->
+                        <ul class="grid-list product-list" data-filter="all">
+
+                            <!-- Sticker1 -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/stickers (3).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Cookie Character Stickers</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">3ksdee</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="250" class="price">Php 250.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Sticker2 -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> <!-- removed href="#" -->
+                                        <img src="images/stickers (2).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+                                            <!-- VIEW BUTTON-->
+
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Fursona Sticker Set</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">3ksdee</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="680" class="price">Php130.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- ButtonPin1 -->
+                            <li class="buttonpin">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> <!-- removed href="#" -->
+                                        <img src="images/button-pin (2).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">OC Button Pins</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Sunflemon & 3ksdee</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="50" class="price">Php50.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- ButtonPin2 -->
+                            <li class="buttonpin">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/button-pin (3).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Sunflemon Button Pin</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Sunflemon</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="30" class="price">Php30.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Poster1 -->
+                            <li class="posterprint">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/poster (2).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Bonii & Snoopy Poster</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Boniifran</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="266" class="price">Php266.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Print1 -->
+                            <li class="posterprint">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/print (1).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Character Print</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">3ksdee</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="1180" class="price">Php1,180.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Print2 -->
+                            <li class="posterprint">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                                        <img src="images/print (2).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Beach Day Print</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Kira Phantom</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="1200" class="price">Php1,200.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Sticker -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/stickers (1).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Character Stickers</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">3ksdee</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="150" class="price">Php150.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Button Pins -->
+                            <li class="buttonpin">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                                        <img src="images/button-pin (4).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Sunflemon Pin</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Sunflemon</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="40" class="price">Php40.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Keychain -->
+                            <li class="keychain">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                                        <img src="images/keychain (1).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Ikinatkat Keychain</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Corner catto</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="70" class="price">Php70.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Keychain -->
+                            <li class="keychain">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/keychain (2).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Ironman Keychain</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Kira Phantom</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="100" class="price">Php100.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Poster -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/poster (1).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Dark Cat Poster</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Ikinatkat</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="250" class="price">Php250.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Poster -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                                        <img src="images/poster (3).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Kira Poster</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Kira Phantom</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="250" class="price">Php250.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Sticker -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/stickers (5).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Valorant Character Stickers</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Kira Phantom</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="120" class="price">Php120.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Sticker -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/stickers (6).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">OC Sticker</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Sunflemon</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="60" class="price">Php60.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Button Pins -->
+                            <li class="buttonpin">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/button-pin (6).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">BoniiLemon</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Bonii & Sunflemon</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="60" class="price">Php60.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Button Pins -->
+                            <li class="buttonpin">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/button-pin (7).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Voxal Pins</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Sunflemon</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="120" class="price">Php120.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Print -->
+                            <li class="sticker">
+                                <div class="product-card">
+                                    <a class="card-banner img-holder has-before" style="--width: 300; --height: 300;"> 
+                                        <img src="images/print (5).png" width="300" height="300" loading="lazy" alt="Art" class="img-cover">
+
+                                        <!-- POP-UP BUTTONS -->
+                                        <ul class="card-action-list">
+
+                                            <!-- VIEW BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn" aria-label="add to basket" title="view product">
+                                                    <ion-icon name="eye" aria-hidden="true"></ion-icon>
+                                                </button>
+                                            </li>
+
+                                            <!-- ADD TO BASKET BUTTON-->
+                                            <li>
+                                                <button class="card-action-btn add-basket" aria-label="add to basket" title="add to basket">
+                                                    <ion-icon name="basket" aria-label="true"></ion-icon>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Green Field Print</a>
+                                        </h3>
+                                        <h4 class="h4">
+                                            <a href="#" class="artist-name">Ikinatkat</a>
+                                        </h4>
+
+                                        <div class="card-price">
+                                            <data value="250" class="price">Php250.00</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </section>
+
+                <!--NEWSLETTER-->
+                <section class="section newsletter" aria-label="newsletter">
+                    <div class="container">
+
+                        <div class="newsletter-card">
+
+                            <div class="card-content">
+                                <h2 class="h2 section-title">MiCOMMS Letter</h2>
+
+                                <p class="section-text">
+                                    Subscribe to our newsletter and get artist updates!
+                                </p>
+                            </div>
+
+                            <form action="" class="card-form">
+                                <input type="email" name="email-address" placeholder="Your email address" required class="email-field">
+
+                                <button type="submit" class="newsletter-btn" aria-label="subscribe">
+                                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!--=== FOOTER ===-->
+        <footer class="footer">
+            <div class="container">
+
+                <!-- Footer Items-->
+                <div class="footer-top section">
+
+                    <!-- Address, Contact, and Social Media-->
+                    <div class="footer-brand">
+
+                        <a href="#" class="logo">MiCOMMS</a>
+
+                        <ul>
+
+                            <!-- Address -->
+                            <li class="footer-list-item">
+                                <ion-icon name="location" aria-hidden="true"></ion-icon>
+
+                                <address class="address">
+                                    Bicol University Polangui, Centro Occidental, Buhi Rd, Polangui, 4506 Albay
+                                </address>
+                            </li>
+
+                            <!-- Contact Number-->
+                            <li class="footer-list-item">
+                                <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+                                <a href="tel:+631234567891" class="footer-link">(+63)123-456-7891</a>
+                            </li>
+
+                            <!-- Social Media -->
+                            <li>
+                                <ul class="social-list">
+
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-facebook"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-tumblr"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-tiktok"></ion-icon>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Help and Information -->
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">Help & Information</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Help & Contact Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Cancelations & Refunds</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Online Stores</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Terms & Conditions</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- About Us -->
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">About Us</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">What We Create</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Newsletter, T&C, Privacy Policy, and Map-->
+                    <div class="footer-list">
+
+                        <p class="footer-list-title">Newsletter</p>
+
+                        <form action="" class="footer-form">
+                            <input type="email" name="email-address" placeholder="Your email address" required class="email-field">
+
+                            <button type="submit" class="footer-form-btn">
+                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                            </button>
+                        </form>
+
+                        <div class="wrapper">
+                            
+                            <a href="#" class="footer-link">Terms & Conditions</a>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">Map</a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-bottom">
+
+                    <p class="copyright">
+                        &copy; 2025 All Rights Reserved by <a href="#" class="copyright-link">MiCOMMS Corp.</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </footer>
+
+        <!--=== BACK TO TOP BUTTON ===-->
+        <a href="" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+            <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+        </a>
+
+        <!--=== ION ICONS LINKS ===-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <!--=== CUSTOM JS LINK ===-->
+        <script src="landing-basket.js" defer></script>
+    </body>
+    
+</html>
+

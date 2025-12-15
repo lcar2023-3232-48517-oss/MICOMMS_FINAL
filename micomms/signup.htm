@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MICOMMS | Sign Up</title>
+  <link rel="icon" type="image/png" href="images/logo-circle.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="signup.css">
+
+</head>
+<body>
+  <video autoplay loop muted plays-inline class="background-clip">
+    <source src="bg vid.mp4" type="video/mp4">
+  </video>
+
+  <div class="signup-box">
+    <div class="top-icon">
+      <img src="logo.png" alt="MICOMMS logo">
+    </div>
+
+    <form id="signupForm" action="signup.php" method="POST">
+
+      <!-- Full name -->
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="full_name" placeholder="Enter Full name" required>
+      </div>
+
+      <!-- Birthdate -->
+      <div class="input-group">
+        <i class="fas fa-gift"></i>
+        <input type="date" name="birthdate" placeholder="Enter Birthdate" required>
+      </div>
+
+      <!-- Phone number -->
+      <div class="input-group">
+        <i class="fas fa-phone"></i>
+        <input type="tel" name="phone" placeholder="Enter Phone Number" required>
+      </div>
+
+      <!-- Full address [I'm gonna dox you]-->
+      <div class="input-group">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" name="address" placeholder="Enter Full Address" required>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" placeholder="Enter Valid Email Address" required>
+      </div>
+
+      <!-- Role selector -->
+      <div class="input-group">
+        <i class="fas fa-user-tag"></i>
+        <select name="role" id="role" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group" id="passwordGroup">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+      </div>
+
+      <!-- Confirm password -->
+      <div class="input-group" id="confirmPasswordGroup">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="confirmPassword" placeholder="Re-enter Password" required>
+      </div>
+
+      <p id="message"></p>
+
+      <button type="submit" class="signup-btn" id="signupBtn" disabled>Sign Up</button>
+    </form>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

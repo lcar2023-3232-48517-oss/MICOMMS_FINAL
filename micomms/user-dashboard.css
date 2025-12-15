@@ -1,0 +1,410 @@
+/* ========== IMPORTED FONTS ========== */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --header-height: 10%;
+
+  /* ========== COLORS ========== */
+  --primary-color: #09E784;
+  --secondary-color: #01C8DC;
+  --tertiary-color: #20DFDA;
+  --black-color: #000000;
+  --green-color: #1ED7B5;
+
+  /* ========== FONT SIZE ========== */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+  --font-size-3xl: 2.5rem;
+
+  /* ========== FONT WEIGHT ========== */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --site-max-width: 1300px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+}
+
+.section-content {
+  margin: 0;
+  padding: 0 40px;
+  max-width: none;
+}
+
+/* ========== HEADER / NAVBAR ========== */
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 25%;
+  z-index: 5;
+  background-image: linear-gradient(to right, #09E784, #01C8DC, #20DFDA);
+}
+
+header .navbar {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  display: flex;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: white;
+  font-size: var(--font-size-xl);
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-logo {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar .nav-logo .logo-text {
+  margin-top: 13px;
+  color: white;
+  font-style: italic;
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
+  font-family: 'Righteous';
+}
+
+.navigation {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  padding: 10px;
+  margin-left: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  margin-left: 5rem;
+  font-size: 10rem;
+  color: #036087;
+}
+
+/* ========== MAIN LAYOUT ========== */
+
+main {
+  display: flex;
+  padding: 20px 40px;
+  gap: 30px;
+}
+
+.content-container {
+  margin-top: 190px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 40px;
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+  position: fixed;
+  margin-top: 4rem;
+  margin-left: 3rem;
+  width: 20%;
+  background: white;
+  border-radius: 12px;
+  text-align: left;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  text-align: left;
+  margin-top: 1rem;
+  font-size: var(--font-size-l);
+}
+
+.sidebar .bio {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.side-tabs button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #35a29f;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  color: #35a29f;
+  transition: 0.3s;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.side-tabs button:hover:not(.edit-profile, .log-out) {
+  background: #35a29f;
+  color: white;
+}
+
+.sidebar .edit-profile {
+  border: 1px solid #036087;
+  font-size: var(--font-size-s);
+  background: white;
+  color: #036087;
+  padding: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .log-out {
+  color: red;
+  border: 1px solid red;
+}
+
+.sidebar .log-out:hover {
+  background: red;
+  color: white;
+}
+
+/* ========== TABS CONTENT ========== */
+
+.tabs-content {
+  display: none;
+}
+
+.tabs-content.active {
+  display: block;
+}
+
+.tabs-content h4 {
+  margin-left: 25rem;
+  font-size: var(--font-size-xxl);
+  font-family: 'Righteous';
+  color: rgb(5, 161, 161);
+}
+
+/* ========== ORDER SECTIONS ========== */
+
+.order-history-tab,
+.order-tracking-tab {
+  margin-left: 25rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.demo-content {
+  margin-left: 25rem;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ========== MODALS ========== */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  inset: 0;
+  background: rgba(0, 0, 0, .5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: relative;
+  z-index: 9999;
+}
+
+.modal-profile-edit {
+  background: #fff;
+  width: 500px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  color: var(--green-color);
+  font-family: "Righteous", sans-serif;
+}
+
+#editProfileModal label {
+  font-size: 14px;
+  color: #036087;
+  font-weight: var(--font-weight-bold);
+}
+
+#editProfileModal input,
+#editProfileModal textarea {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  resize: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  color: gray;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal button,
+.modal-content-delete button,
+.save-profile-btn {
+  border: none;
+  background: linear-gradient(90deg, #1cdcda, #1dd7b5, #09e883);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+}
+
+.modal button:hover,
+.modal-content-delete button:hover,
+.save-profile-btn:hover {
+  border: 1px solid var(--black-color);
+  background: none;
+  color: var(--black-color);
+}
+
+.modal-content-delete {
+  background: white;
+  width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.delete-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ========== PROFILE PICTURE PREVIEW ========== */
+
+.profile-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.profile-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border: 3px solid var(--primary-color);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-img {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-left: 90px;
+}

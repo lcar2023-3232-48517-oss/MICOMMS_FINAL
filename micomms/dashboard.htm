@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICOMMS</title>
+
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/png" href="images/logoalt.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo-circle.png">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar section-content">
+            <div class="logo-container">
+                <a href="landing-basket.htm" class="back-button" title="Back to landing page">
+                    <i class="material-icons">arrow_back</i>
+                </a>
+                <img src="images/logo-white.png" alt="MiCOMMS logo" class="logo-img">
+                <a href="#" class="nav-logo">
+                    <h2 class="logo-text">MiCOMMS</h2>
+                </a>
+            </div>
+        </nav>
+
+
+        <nav class="navigation">
+            <div class="profile-section">
+                <i class="material-icons profile-icon">account_circle</i>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Main Content-->
+    <main>
+        <section class="content-container">
+            <!-- side bar-->
+            <aside class="sidebar">
+                <h3>Seller/Admin</h3>
+                <p class="bio">
+                    Write something about you...
+                </p>
+
+
+                <div class="tabs">
+                    <button type="button" class="active edit-profile" data-tab-value="#edit_profile">Edit profile</button><hr>
+                    <button type="button" data-tab-value="#view">View as</button>
+
+
+                    <button type="button" data-tab-value="#product_overview">Product Overview</button>
+                    <button type="button" data-tab-value="#dashboard">Dashboard</button><hr>
+
+
+                    <button type="button" data-tab-value="#settings">Settings</button>
+                    <button type="button" data-tab-value="#help">Help Centre</button>
+
+
+                    <!-- Log out -->
+                    <button type="button" class="log-out" onclick="logoutNow()">Log out</button>
+                </div>
+            </aside>
+        </section>
+
+
+        <section class="content-container">
+            <!-- View As -->
+            <div class="tabs-content active" id="view" data-content="view">
+                <h4>PRODUCTS</h4>
+                <section class="product-list" id="productsList">
+                    <!-- Products -->
+                    <div class="product-card" style="justify-content:center; align-items:center;">
+                        <p>No products yet!</p>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="tab-content">
+                <!-- Product Overview -->
+                <div class="tabs-content" id="product_overview" data-content="product_overview">
+                    <h4>Product Overview</h4>
+                    <div class="update">
+                        <!-- PRODUCTS COLUMN -->
+                        <section class="products-list">
+                            <div class="products-card" id="productsContainer">
+                                <!-- Add product button  -->
+                                <button type="button" class="add-prod">
+                                    <i class="material-icons">add</i>Add Product
+                                </button>
+                            </div>
+                        </section>
+
+
+                        <!-- Selling List (demo) -->
+                        <container class="selling-list">
+                            <div class="selling-card">
+                                <h5>Selling Products</h5>
+                                <div class="item">
+                                    <p>PRODUCT</p>
+                                    <p>REVENUE</p>
+                                    <p>SOLD</p>
+                                </div>
+                                <hr class="table-line">
+                                <div class="item">
+                                    <p>No data yet</p>
+                                    <p>-</p>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </container>
+                    </div>
+                </div>
+
+
+                <!-- Dashboard -->
+                <div class="tabs-content" id="dashboard" data-content="dashboard">
+                    <h4>Dashboard</h4>
+                    <div class="flex-center">
+                        <div class="chart-container">
+                            
+                            <!-- BALANCE CARD -->
+                            <div class="balance-card flex-center">
+                                <div class="wrapper">
+                                    <h3 class="text">Product Rate</h3>
+                                    <data class="h2" value="0.00">$0.00</data>
+                                </div>
+                            </div>
+
+
+                            <!-- CHART CARD -->
+                            <div class="chart-card">
+                                <h3>Earnings - Last 7 days</h3>
+                                <div class="no-earnings">
+                                    <p>No earnings yet</p>
+                                </div>
+
+
+                                <div class="wrapper flex-center">
+                                    <div class="card-meta">
+                                        <p class="text">Total this month</p>
+                                        <data class="meta-value" value="0.00">$0.00</data>
+                                    </div>
+                                    <div class="card-meta">
+                                        <data class="meta-value small" value="0">0%</data>
+                                        <p class="text">from last month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Settings (demo) -->
+                <div class="tabs-content" id="settings" data-content="settings">
+                    <h4>Settings</h4>
+                    <div class="demo-content">
+                        <p>This is a demo settings page.</p>
+                    </div>
+                </div>
+
+
+                <!-- Help Centre (demo) -->
+                <div class="tabs-content" id="help" data-content="help">
+                    <h4>Help Centre</h4>
+                    <div class="demo-content">
+                        <p>This is a demo help centre page.</p>
+                    </div>
+                </div>
+
+
+                <!-- Hidden tab -->
+                <div class="tabs-content" id="edit_profile" data-content="edit_profile"></div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-profile-edit">
+            <span class="close" onclick="closeEditProfile()">&times;</span>
+            <h2>Edit Profile</h2>
+
+
+            <!-- profile picture input -->
+            <input type="file" id="profilePictureInput" accept="image/*">
+            <div id="profilePicturePreview" class="profile-preview"></div>
+
+
+            <label>Display Name</label>
+            <input id="profileNameInput" type="text" placeholder="Username...">
+
+
+            <label>Bio</label>
+            <textarea id="profileBioInput" placeholder="Write something about you..."></textarea>
+
+
+            <button onclick="saveProfile()">Save</button>
+        </div>
+    </div>
+
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content-add">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Add Product</h2>
+
+
+            <!-- Product image + price -->
+            <label>Product Image</label>
+            <input type="file" id="productImage" accept="image/*">
+            <div id="productImagePreview" class="product-preview"></div>
+
+
+            <label>Product Name</label>
+            <input type="text" id="productName">
+
+
+            <label>Price</label>
+            <input type="number" id="productPrice" step="0.01" min="0" placeholder="0.00">
+
+
+            <label><p class="product-category">Category: </p></label>
+                <select id="productCategory">
+                  <option value="keychains">Keychains</option>
+                  <option value="stickers">Stickers</option>
+                  <option value="button-pins">Button Pins</option>
+                  <option value="posters-prints">Posters / Prints</option>
+                </select>
+
+            <label><p class="product-stock">Stock: </p></label>
+            <input type="number" id="productStock" min="0" placeholder="0">
+
+            <label>Description</label>
+            <textarea id="productDesc"></textarea>
+
+
+            <div class="modal-buttons">
+                <button id="saveProductBtn">Save Product</button>
+                <button id="cancelAddBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Edit Product Modal -->
+    <div id="editModal" class="modal">
+      <div class="modal-content-add">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h2>Edit Product</h2>
+
+        <label for="editTitle">Product Name</label>
+        <input type="text" id="editTitle">
+
+        <label for="editDesc">Description</label>
+        <textarea id="editDesc"></textarea>
+
+        <label for="editPrice">Price</label>
+        <input type="number" id="editPrice" min="0" step="0.01">
+
+        <div class="edit-flex-row">
+            <div class="edit-column">
+              <label for="editCategory">Category</label>
+              <select id="editCategory">
+                  <option value="keychains">Keychains</option>
+                  <option value="pins">Button Pins</option>
+                  <option value="stickers">Stickers</option>
+                  <option value="poster-prints">Poster / Prints</option>
+              </select>
+            </div>
+
+            <div class="edit-column">
+                <label for="editStock">Stock Quantity</label>
+                <input type="number" id="editStock" min="0" step="1">
+            </div>
+        </div>
+
+        <div class="edit-button">
+          <button onclick="saveEdit()">Save Changes</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Delete Product -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content-delete">
+            <h2>Delete this Product?</h2>
+            <div class="delete-buttons">
+                <button onclick="confirmDelete()">Yes</button>
+                <button onclick="closeDeleteModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="function.js"></script>
+</body>
+</html>
+

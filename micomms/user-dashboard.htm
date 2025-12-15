@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MICOMMS</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" type="image/png" href="images/logoalt.png">
+  <link rel="stylesheet" href="user-dashboard.css">
+  <link rel="icon" type="image/png" href="images/logo-circle.png">
+</head>
+<body>
+    
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar section-content">
+      <div class="logo-container">
+        <a href="landing-basket.htm" class="back-button" title="Back to landing page">
+          <i class="material-icons">arrow_back</i>
+        </a>
+        <img src="images/logo-white.png" alt="MiCOMMS logo" class="logo-img">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">MiCOMMS</h2>
+        </a>
+      </div>
+    </nav>
+
+    <nav class="navigation">
+      <div class="profile-section">
+        <i class="material-icons profile-icon" aria-label="Profile">account_circle</i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="content-container">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3>User</h3>
+        <p class="bio">
+          Write something about you...
+        </p>
+
+        <div class="side-tabs">
+          <button type="button" class="edit-profile">Edit profile</button>
+          <hr>
+          <button type="button" data-tab-value="#order_history">History</button>
+          <button type="button" data-tab-value="#order_tracking">Track Order</button>
+          <hr>
+          <button type="button" data-tab-value="#settings">Settings</button>
+          <button type="button" data-tab-value="#help">Help Centre</button>
+
+          <!-- Log out -->
+          <button type="button" class="log-out" onclick="logoutNow()">Log out</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-container">
+      <!-- Order History -->
+      <div class="tabs-content active" id="order_history" data-content="order_history">
+        <h4>ORDER HISTORY</h4>
+        <section class="order-history-tab" id="orderHistoryContainer"></section>
+        <div class="demo-content" id="noOrderHistory">
+          <p>No product ordered</p>
+        </div>
+      </div>
+
+      <!-- Order Tracking -->
+      <div class="tabs-content" id="order_tracking" data-content="order_tracking">
+        <h4>ORDER TRACKING</h4>
+        <section class="order-tracking-tab" id="orderTrackingContainer"></section>
+        <div class="demo-content" id="noOrderTracking">
+          <p>No product added</p>
+        </div>
+      </div>
+
+      <!-- Settings (demo) -->
+      <div class="tabs-content" id="settings" data-content="settings">
+        <h4>Settings</h4>
+        <div class="demo-content">
+          <p>This is a demo settings page.</p>
+        </div>
+      </div>
+
+      <!-- Help Centre (demo) -->
+      <div class="tabs-content" id="help" data-content="help">
+        <h4>Help Centre</h4>
+        <div class="demo-content">
+          <p>This is a demo help centre page.</p>
+        </div>
+      </div>
+
+      <!-- Hidden tab -->
+      <div class="tabs-content" id="edit_profile" data-content="edit_profile"></div>
+    </section>
+  </main>
+
+  <!-- Modal overlay for all modals -->
+  <div id="modalOverlay" class="modal-overlay">
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+      <div class="modal-profile-edit">
+        <span class="close" onclick="closeEditProfile()">&times;</span>
+        <h2>Edit Profile</h2>
+
+        <!-- profile picture input -->
+        <input type="file" id="profilePictureInput" accept="image/*">
+        <div id="profilePicturePreview" class="profile-preview"></div>
+
+        <label>Display Name</label>
+        <input id="profileNameInput" type="text" placeholder="Username...">
+
+        <label>Bio</label>
+        <textarea id="profileBioInput" placeholder="Write something about you..."></textarea>
+
+        <button type="button" class="save-profile-btn" onclick="saveProfile()">Save</button>
+      </div>
+    </div>
+
+    <!-- Log Out Modal -->
+    <div class="modal" id="logoutModal">
+      <div class="modal-content-delete">
+        <h2>Log Out</h2>
+        <p>Are you sure you want to log out?</p>
+        <div class="delete-buttons">
+          <button type="button" onclick="confirmLogout()">Yes</button>
+          <button type="button" onclick="closeLogoutModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="user-dashboard.js"></script>
+</body>
+</html>

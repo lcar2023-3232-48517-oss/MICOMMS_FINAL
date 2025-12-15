@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.signup-box {
+  background: white;
+  border: 3px solid #1dd8c1;
+  border-radius: 20px;
+  width: 400px;
+  padding: 40px 30px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.top-icon {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1dd8c1;
+}
+
+.top-icon img {
+  position: absolute;
+  top: -5px;
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 2px solid #1dd8c1;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background: white;
+}
+
+.input-group i {
+  color: #1dd8c1;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.input-group.valid {
+  border-color: green;
+}
+
+.input-group.invalid {
+  border-color: red;
+}
+
+.signup-btn {
+  border: 2px solid #1dd8c1;
+  background: white;
+  color: #1dd8c1;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:disabled {
+  background: #eee;
+  color: #999;
+  border-color: #999;
+  cursor: not-allowed;
+}
+
+.signup-btn:hover:not(:disabled) {
+  background: #1dd8c1;
+  color: white;
+}
+
+#message {
+  font-size: 13px;
+  margin-top: -8px;
+}
+
+#message.valid {
+  color: green;
+}
+
+#message.invalid {
+  color: red;
+}
+
+.background-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.input-group select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+}
+
+.input-group input[type="text"] {
+  width: 100%;
+}
+
