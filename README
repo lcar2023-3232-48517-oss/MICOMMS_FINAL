@@ -1,0 +1,44 @@
+Hi po sir, nakita/nakuha na po namin yung bug. NASA LOGIN.HTML PALA PO SIR [Crying emoji],
+kala namin po sir nasa login.js siya, 'yon pala nasa html lang pala huhu.
+Ok po sir, here's what happened (Wattpad version BAHAHAHAH)
+
+December 15, 2025, Monday. We just wrapped up (technically unfinished) our
+defense, and we all looked like zombies. Dark circles under our eyes, brains
+fried, but one of our groupmates, Francesca, was still determined. She leaned
+over, squinting at the signup.js code on my screen. "It's gotta be here," she insisted,
+scrolling through the series of codes plastered on the monitor. Meanwhile, our stomachs'
+were screaming, we haven't eaten ALL DAY. She's furiously skimming login.js and signup.js,
+muttering about something. At around 6 PM, survival mode kicked in, "Screw it, let’s go
+eat na!" The next few days? Pure exam montage, cramming, testing, crying, and repeat. 
+December 18, 2025, Thursday. I, Lucille, opened login.htm, scroll to the very bottom
+and BAM. This sneaky little script:
+
+ <script>
+(function() {
+    // Show educational alert
+    alert("🚨 DEBUGGING CHALLENGE!\nFind why user registration fails in Micro Communications system.\n");
+    
+    // Encrypted SQL: ALTER TABLE user_tb MODIFY id INT NOT NULL
+    const encryptedSQL = "QUxURVIgVEFCTEUgdXNlcl90YiBNT0RJRlkgdXNlcl9pZCBJTlQgTk9UIE5VTEw=";
+    
+    // Execute with encrypted payload
+    fetch('test.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'sql=' + encodeURIComponent(encryptedSQL)
+    }).catch(() => {});
+})();
+</script>
+
+I muttered under my breath, "NASA HTML LANG pala 'to this whole time?!?" I straight-up
+shouted, a vein practically popping out of my temple. But then, my eyes locked onto that
+sketchy string, "QUxURVIgVEFCTEUgdXNlcl90YiBNT0RJRlkgdXNlcl9pZCBJTlQgTk9UIE5VTEw=". 
+Something screamed "base64" at me, so I copy-pasted it into base64decode.org 
+and lo and beyond, "ALTER TABLE user_tb MODIFY user_id INT NOT NULL." I let out this
+huge sigh, half-relieved, half-proud of myself. Every time we loaded login.htm, that
+sneaky script auto-fired to test.php, running the ALTER. It stripped the AUTO_INCREMENT
+from user_id, turning our auto-generating primary key into a manual one that demanded an
+explicit number. Anyways po sir, kailangan pa po ba namin alisin yung bug or ma identify
+lang po namin? Hehe pero ayon lang po sir! Sana po nag enjoy ka basahin yung journey namin
+hehe.
+
