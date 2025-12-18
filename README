@@ -42,14 +42,5 @@ explicit number. Anyways po sir, kailangan pa po ba namin alisin yung bug or ma 
 lang po namin? Hehe pero ayon lang po sir! Sana po nag enjoy ka basahin yung journey namin
 hehe.
 
-MERON PA PALA SIR, yung signup.php (Tama pala si Francesca haha)
-Ahem, th signup.php was choking on an "ArgumentCountError" because the email check
-query used UNION across admin_tb and user_tb (needing 2 ? placeholders) but you only bound
-1 parameter ("s", $email) instead of "ss", $email, $email. Plus no session_start() at the top
-so $_SESSION['user_id'] was doomed, and you were inserting user_birthdate/admin_birthdate columns
-that don't exist in ourdatabase schema (it's only 6 fields per table, not 7). Here’s how we
-fixed it: we added session_start(), change bind_param to "ss" for the check and "sssiss" for
-inserts (dropping birthdate), and match the real column names. Hell yeah,
-localhost/miccoms/MICOMMS_FINAL/signup.htm saves users perfectly na hehe.
-
+MERON PA PALA SIR, yung signup.php 
 
