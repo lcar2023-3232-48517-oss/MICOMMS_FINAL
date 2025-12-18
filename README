@@ -43,4 +43,28 @@ lang po namin? Hehe pero ayon lang po sir! Sana po nag enjoy ka basahin yung jou
 hehe.
 
 MERON PA PALA SIR, yung signup.php 
-
+Ahem, the signup.php was choking on an "ArgumentCountError" because the email check query used
+UNION across admin_tb and user_tb (needing 2 ? placeholders) but you only bound 1 parameter
+("s", $email) instead of "ss", $email, $passwordToStore.You were also inserting
+user_birthdate/admin_birthdate columns that don't exist in ourdatabase schema
+(it's only 6 fields per table, not 7). Hell yeah, localhost/miccoms/MICOMMS_FINAL/signup.htm
+saves users perfectly hehe. Pagod na po ako mag english, basta po sir ano, ito po changes namin:
+$checkStmt->bind_param("ss", $email, $passwordToStore);     
+$id = null;
+if ($role === 'user') {
+    $sql = "INSERT INTO user_tb (user_name, user_email, user_pass, user_num, user_address, user_datereg)
+            VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssss", $fullName, $email, $passwordToStore, $phone, $address, $today);
+    $stmt->execute();
+    $id = $conn->insert_id;
+    $_SESSION['user_id'] = $id;
+    
+} elseif ($role === 'admin') {
+    $sql = "INSERT INTO admin_tb (admin_name, admin_email, admin_pass, admin_num, admin_address, admin_dateadd)
+            VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssss", $fullName, $email, $passwordToStore, $phone, $address, $today);
+    $stmt->execute();
+    $id = $conn->insert_id;
+    $_SESSION['admin_id'] = $id;
