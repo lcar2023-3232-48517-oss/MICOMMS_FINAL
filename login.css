@@ -110,10 +110,6 @@ body {
     linear-gradient(90deg, #ff7676, #ff4444);
 }
 
-.input-box.invalid input {
-
-}
-
 .input-box.invalid .material-icons {
   color: #ff4444;
 }
