@@ -27,7 +27,7 @@ $passwordToStore = $password;
 $today = date('Y-m-d');
 $checkSql = "SELECT COUNT(*) as count FROM admin_tb WHERE admin_email = ? UNION SELECT COUNT(*) as count FROM user_tb WHERE user_email = ?";
 $checkStmt = $conn->prepare($checkSql);
-$checkStmt->bind_param("s", $email);
+$checkStmt->bind_param("ss", $email, $passwordToStore);
 $checkStmt->execute();
 $checkResult = $checkStmt->get_result();
 $counts = [];
@@ -42,19 +42,19 @@ if (in_array(1, $counts)) {
 
 $id = null;
 if ($role === 'user') {
-    $sql = "INSERT INTO user_tb (user_name, user_email, user_pass, user_num, user_address, user_datereg, user_birthdate)
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO user_tb (user_name, user_email, user_pass, user_num, user_address, user_datereg)
+            VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssss", $fullName, $email, $passwordToStore, $phone, $address, $today, $birthdate);
+    $stmt->bind_param("ssssss", $fullName, $email, $passwordToStore, $phone, $address, $today);
     $stmt->execute();
     $id = $conn->insert_id;
     $_SESSION['user_id'] = $id;
     
 } elseif ($role === 'admin') {
-    $sql = "INSERT INTO admin_tb (admin_name, admin_email, admin_pass, admin_num, admin_address, admin_dateadd, admin_birthdate)
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO admin_tb (admin_name, admin_email, admin_pass, admin_num, admin_address, admin_dateadd)
+            VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssss", $fullName, $email, $passwordToStore, $phone, $address, $today, $birthdate);
+    $stmt->bind_param("ssssss", $fullName, $email, $passwordToStore, $phone, $address, $today);
     $stmt->execute();
     $id = $conn->insert_id;
     $_SESSION['admin_id'] = $id;
